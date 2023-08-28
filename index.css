@@ -1,0 +1,253 @@
+/* header */
+header {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+header a {
+  color: white;
+  position: relative;
+}
+
+header a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: #35a22c;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+}
+
+header a.nav-link:hover::before,
+header .active a::before {
+  width: 100%;
+}
+
+header .nav-item {
+  margin-left: 20px;
+}
+
+header .active a,
+header a.nav-link:hover {
+  color: #35a22c;
+}
+
+header a.navbar-brand:hover {
+  color: white;
+}
+
+/* banner */
+.banner .carousel-item img {
+  height: 100vh;
+  min-height: 500px;
+  object-fit: cover;
+}
+
+.banner .carousel-caption img {
+  width: 140px;
+  height: 140px;
+  min-height: unset;
+  border-radius: 50%;
+}
+
+.banner .carousel-caption {
+  bottom: 50%;
+  transform: translateY(50%);
+}
+
+.banner .carousel-item::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(14, 14, 14, 0.353);
+}
+
+.carousel-indicators li {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+}
+
+.carousel-indicators li.active {
+  background-color: #35a22c;
+}
+
+.carousel-caption h5 {
+  font-size: 56px;
+  line-height: 65px;
+}
+
+/* project */
+.projects .container h2 {
+  font-size: 36px;
+  line-height: 42px;
+  color: #1a1d2d;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-transform: none;
+}
+.projects .container p {
+  width: 75%;
+  text-align: center;
+}
+.projects .nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: #35a22c;
+  color: white;
+}
+
+.projects .project__tab .nav-pills .nav-link.active {
+  border: none;
+}
+
+.projects .project__tab ul {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.projects .nav-item a {
+  color: black;
+  border: 1px solid #1a1d2d;
+  margin: 0 5px;
+}
+
+.project__item {
+  padding: 15px;
+}
+
+.project__item .card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border: none;
+}
+
+.project__item .card-body {
+  border: 1px solid transparent;
+  border-top: none;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  transition: 0.3s;
+}
+
+.project__item:hover .card-body {
+  border: 1px solid #35a22c;
+  border-top: none;
+}
+
+.project__item .card-body .card-title {
+  transition: 0.3s;
+}
+
+.project__item:hover .card-body .card-title {
+  color: #35a22c;
+}
+
+.project__item .card-body p {
+  width: 100%;
+}
+
+.project__item .card-body .card-text {
+  color: #585858;
+}
+
+/* experience */
+.experience {
+  background-image: url(./imgs/3.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+}
+
+.experience::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.578);
+  z-index: -1;
+}
+
+.experience__item {
+  height: 325px;
+  text-align: center;
+  color: white;
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid white;
+  backdrop-filter: blur(3px);
+}
+
+.experience__item:hover {
+  background: #000;
+  cursor: not-allowed;
+}
+
+.experience__item i {
+  font-size: 40px;
+  color: #35a22c;
+}
+
+.experience__item .fa-shekel-sign {
+  font-weight: 800;
+}
+
+.experience__item .experience__item__title {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 30px;
+  margin: 0px 0px 8px;
+  padding: 25px 0px 0px;
+  text-align: center;
+}
+
+/* responsive */
+
+footer {
+  height: 300px;
+  width: 100%;
+  background: #222222;
+}
+
+/* @media screen and (max-width:1200px) {
+    footer{
+        background: green;
+    }
+}
+
+@media screen and (max-width:992px){
+    footer{
+        background: red;
+    }
+} */
+
+@media screen and (min-width: 992px) {
+  footer {
+    background: blue;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  footer {
+    background: orange;
+  }
+}
+
+/* min-width : tối thiểu ~ mobie frist */
+/* max-width : Tối đa ~ desktop frist*/
+
+/*  vị trí */
+/* break point bs4 */
